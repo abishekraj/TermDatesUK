@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "council.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "name", "source_url", "source_type", "licence", "review_status", "last_verified", "academic_years"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "pattern": "^https?://" },
+    "source_type": { "enum": ["ical", "html", "pdf", "manual"] },
+    "licence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "pattern": "^https?://" },
+        "notes": { "type": "string" }
+      }
+    },
+    "robots_checked": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "review_status": { "enum": ["reviewed", "needs_review"] },
+    "last_verified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "academic_years": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["year", "terms", "half_terms", "inset_days", "bank_holidays_excluded"],
+        "properties": {
+          "year": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+          "terms": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/period" } },
+          "half_terms": { "type": "array", "items": { "$ref": "#/definitions/period" } },
+          "inset_days": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["date"],
+              "properties": {
+                "date": { "$ref": "#/definitions/date" },
+                "note": { "type": "string" }
+              }
+            }
+          },
+          "bank_holidays_excluded": { "type": "boolean" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  },
+  "definitions": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "start", "end"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "start": { "$ref": "#/definitions/date" },
+        "end": { "$ref": "#/definitions/date" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
