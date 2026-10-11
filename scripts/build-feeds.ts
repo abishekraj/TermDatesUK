@@ -5,7 +5,9 @@ import { COUNCILS_DIR, ROOT, loadCouncilFiles } from './lib/load.ts';
 import type { Council } from './lib/types.ts';
 import { validateCouncil } from './lib/validate-council.ts';
 
-const feedsDir = join(ROOT, 'public', 'feeds');
+// --preview: also build needs_review councils into ./preview-feeds (gitignored) for import testing only.
+const preview = process.argv.includes('--preview');
+const feedsDir = join(ROOT, preview ? 'preview-feeds' : join('public', 'feeds'));
 mkdirSync(feedsDir, { recursive: true });
 for (const f of readdirSync(feedsDir)) if (f.endsWith('.ics')) rmSync(join(feedsDir, f));
 
@@ -18,7 +20,7 @@ for (const { file, data } of loadCouncilFiles(COUNCILS_DIR)) {
     process.exit(1);
   }
   const c = data as Council;
-  if (c.review_status !== 'reviewed') {
+  if (c.review_status !== 'reviewed' && !preview) {
     console.warn(`- skipped ${c.slug} (${c.review_status})`);
     continue;
   }
@@ -26,5 +28,5 @@ for (const { file, data } of loadCouncilFiles(COUNCILS_DIR)) {
   index.push({ slug: c.slug, name: c.name, source_url: c.source_url, last_verified: c.last_verified });
   built++;
 }
-writeFileSync(join(ROOT, 'data', 'councils.json'), JSON.stringify(index, null, 2) + '\n');
+if (!preview) writeFileSync(join(ROOT, 'data', 'councils.json'), JSON.stringify(index, null, 2) + '\n');
 console.log(`built ${built} feed(s)`);

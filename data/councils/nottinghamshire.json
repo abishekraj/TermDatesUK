@@ -1,0 +1,45 @@
+{
+  "slug": "nottinghamshire",
+  "name": "Nottinghamshire",
+  "source_url": "https://www.nottinghamshire.gov.uk/education/school-holidays-and-closures/school-holiday-and-term-dates",
+  "source_type": "manual",
+  "licence": {
+    "name": "UNVERIFIED",
+    "url": "https://www.nottinghamshire.gov.uk/education/school-holidays-and-closures/school-holiday-and-term-dates",
+    "notes": "Source page read only via search-result summaries (council sites unreachable from build sandbox). Reuse licence and robots.txt not yet checked."
+  },
+  "review_status": "needs_review",
+  "last_verified": "2026-10-11",
+  "academic_years": [
+    {
+      "year": "2026-27",
+      "terms": [
+        {
+          "name": "Autumn term",
+          "start": "2026-09-01",
+          "end": "2026-12-18"
+        },
+        {
+          "name": "Spring term",
+          "start": "2027-01-04",
+          "end": "2027-03-25"
+        },
+        {
+          "name": "Summer term",
+          "start": "2027-04-12",
+          "end": "2027-07-28"
+        }
+      ],
+      "half_terms": [
+        {
+          "name": "Autumn half term (two weeks)",
+          "start": "2026-10-19",
+          "end": "2026-10-30"
+        }
+      ],
+      "inset_days": [],
+      "bank_holidays_excluded": false
+    }
+  ],
+  "notes": "Applies to council-maintained schools only. February and May half-term dates NOT yet captured. 2027-28 dates are proposals pending consultation outcome, so omitted."
+}

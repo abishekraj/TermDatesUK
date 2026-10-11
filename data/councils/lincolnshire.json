@@ -1,0 +1,94 @@
+{
+  "slug": "lincolnshire",
+  "name": "Lincolnshire",
+  "source_url": "https://www.lincolnshire.gov.uk/school-attendance/school-term-times",
+  "source_type": "manual",
+  "licence": {
+    "name": "UNVERIFIED",
+    "url": "https://www.lincolnshire.gov.uk/school-attendance/school-term-times",
+    "notes": "Source page read only via search-result summaries (council sites unreachable from build sandbox). Reuse licence and robots.txt not yet checked."
+  },
+  "review_status": "needs_review",
+  "last_verified": "2026-10-11",
+  "academic_years": [
+    {
+      "year": "2026-27",
+      "terms": [
+        {
+          "name": "Autumn term",
+          "start": "2026-09-03",
+          "end": "2026-12-18"
+        },
+        {
+          "name": "Spring term",
+          "start": "2027-01-05",
+          "end": "2027-03-25"
+        },
+        {
+          "name": "Summer term",
+          "start": "2027-04-14",
+          "end": "2027-07-21"
+        }
+      ],
+      "half_terms": [
+        {
+          "name": "Autumn half term",
+          "start": "2026-10-26",
+          "end": "2026-10-30"
+        },
+        {
+          "name": "February half term",
+          "start": "2027-02-15",
+          "end": "2027-02-19"
+        },
+        {
+          "name": "Summer half term",
+          "start": "2027-05-31",
+          "end": "2027-06-04"
+        }
+      ],
+      "inset_days": [],
+      "bank_holidays_excluded": false
+    },
+    {
+      "year": "2027-28",
+      "terms": [
+        {
+          "name": "Autumn term",
+          "start": "2027-09-06",
+          "end": "2027-12-17"
+        },
+        {
+          "name": "Spring term",
+          "start": "2028-01-05",
+          "end": "2028-03-31"
+        },
+        {
+          "name": "Summer term",
+          "start": "2028-04-19",
+          "end": "2028-07-21"
+        }
+      ],
+      "half_terms": [
+        {
+          "name": "Autumn half term",
+          "start": "2027-10-25",
+          "end": "2027-10-29"
+        },
+        {
+          "name": "February half term",
+          "start": "2028-02-14",
+          "end": "2028-02-18"
+        },
+        {
+          "name": "Summer half term",
+          "start": "2028-05-29",
+          "end": "2028-06-02"
+        }
+      ],
+      "inset_days": [],
+      "bank_holidays_excluded": false
+    }
+  ],
+  "notes": "Applies to community and voluntary controlled schools only; academies, free, foundation and VA schools may differ. INSET days are set per school and not listed."
+}

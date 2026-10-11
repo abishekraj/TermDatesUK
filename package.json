@@ -8,6 +8,7 @@
     "build": "pnpm validate && pnpm feeds && next build",
     "validate": "tsx scripts/validate.ts",
     "feeds": "tsx scripts/build-feeds.ts",
+    "feeds:preview": "tsx scripts/build-feeds.ts --preview",
     "test": "tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit"
   },

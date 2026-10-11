@@ -1,0 +1,104 @@
+{
+  "slug": "staffordshire",
+  "name": "Staffordshire",
+  "source_url": "https://www.staffordshire.gov.uk/schools-and-learning/school-term-dates",
+  "source_type": "manual",
+  "licence": {
+    "name": "UNVERIFIED",
+    "url": "https://www.staffordshire.gov.uk/schools-and-learning/school-term-dates",
+    "notes": "Source page read only via search-result summaries (council sites unreachable from build sandbox). Reuse licence and robots.txt not yet checked."
+  },
+  "review_status": "needs_review",
+  "last_verified": "2026-10-11",
+  "academic_years": [
+    {
+      "year": "2026-27",
+      "terms": [
+        {
+          "name": "Autumn term",
+          "start": "2026-09-02",
+          "end": "2026-12-18"
+        },
+        {
+          "name": "Spring term",
+          "start": "2027-01-04",
+          "end": "2027-03-25"
+        },
+        {
+          "name": "Summer term",
+          "start": "2027-04-12",
+          "end": "2027-07-21"
+        }
+      ],
+      "half_terms": [
+        {
+          "name": "Autumn half term",
+          "start": "2026-10-26",
+          "end": "2026-10-30"
+        },
+        {
+          "name": "February half term",
+          "start": "2027-02-15",
+          "end": "2027-02-19"
+        },
+        {
+          "name": "Summer half term",
+          "start": "2027-05-31",
+          "end": "2027-06-04"
+        }
+      ],
+      "inset_days": [
+        {
+          "date": "2026-09-01",
+          "note": "Council-set INSET day; other INSET days set by schools"
+        }
+      ],
+      "bank_holidays_excluded": false
+    },
+    {
+      "year": "2027-28",
+      "terms": [
+        {
+          "name": "Autumn term",
+          "start": "2027-09-03",
+          "end": "2027-12-17"
+        },
+        {
+          "name": "Spring term",
+          "start": "2028-01-04",
+          "end": "2028-04-07"
+        },
+        {
+          "name": "Summer term",
+          "start": "2028-04-24",
+          "end": "2028-07-21"
+        }
+      ],
+      "half_terms": [
+        {
+          "name": "Autumn half term",
+          "start": "2027-10-25",
+          "end": "2027-10-29"
+        },
+        {
+          "name": "February half term",
+          "start": "2028-02-14",
+          "end": "2028-02-18"
+        },
+        {
+          "name": "Summer half term",
+          "start": "2028-05-29",
+          "end": "2028-06-02"
+        }
+      ],
+      "inset_days": [
+        {
+          "date": "2027-09-02",
+          "note": "Council-set INSET day; other INSET days set by schools"
+        }
+      ],
+      "bank_holidays_excluded": false
+    }
+  ],
+  "notes": "Applies to community, voluntary controlled, community special and maintained nursery schools. Academies, free, foundation and VA schools may differ."
+}
